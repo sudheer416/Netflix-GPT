@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+
+import { BrowserRouter } from "react-router";
+import { render, screen } from '@testing-library/react'
+
+import Header from './component/Header';
+
+
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  render(
+  <Header/>
+);
+  const linkElement = screen.getByAltText(/netflix-log/i);
   expect(linkElement).toBeInTheDocument();
 });
